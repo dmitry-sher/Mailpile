@@ -55,6 +55,7 @@ def CatchUnixSignals(session):
 
 def Interact(session):
     global readline
+    is_sandstorm = bool(os.getenv('SANDSTORM', False))
     try:
         import readline as rl  # Unix-only
         readline = rl
@@ -87,9 +88,14 @@ def Interact(session):
                                        readline=(readline is not None))
         while not mailpile.util.QUITTING:
             try:
-                with session.ui.term:
-                    session.ui.block()
-                    opt = raw_input(prompt).decode('utf-8').strip()
+                if is_sandstorm:
+                    while True:
+                        sleep(10)
+                        pass
+                else:
+                    with session.ui.term:
+                        session.ui.block()
+                        opt = raw_input(prompt).decode('utf-8').strip()
             except KeyboardInterrupt:
                 session.ui.unblock(force=True)
                 session.ui.notify(_('Interrupted. '

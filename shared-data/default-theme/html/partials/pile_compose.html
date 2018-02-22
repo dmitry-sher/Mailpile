@@ -82,7 +82,7 @@
                 </div>
               </div>
               {% endif %}
-  
+
             </li>
             {% endfor %}
             {% endif %}
@@ -157,7 +157,11 @@
             {% endfor %}
             {% if found|length == 0 %}
               <li role="presentation">
-                <a target='_blank' href="{{ U('/profiles/') }}">
+                {% if is_sandstorm %}
+                  <a href="{{ U('/profiles/') }}">
+                {% else %}
+                  <a target='_blank' href="{{ U('/profiles/') }}">
+                {% endif %}
                   No usable profiles found, click to check your settings!
                 </a>
               </li>

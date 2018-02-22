@@ -495,9 +495,14 @@ class UserInteraction:
                 ei[kw] = escape_html('%.2048s' % value).replace('\n', '<br>')
         return emsg % ei
 
+    def set_sandstorm_variables(self, vars):
+        vars['is_sandstorm'] = bool(os.getenv('SANDSTORM', False))
+        return vars
+
     def render_web(self, cfg, tpl_names, data):
         """Render data as HTML"""
         alldata = default_dict(self.html_variables)
+        alldata = self.set_sandstorm_variables(alldata)
         alldata['config'] = cfg
         alldata.update(data)
         try:
