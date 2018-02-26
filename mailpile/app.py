@@ -18,6 +18,7 @@ from mailpile.plugins.core import Load, Rescan, Quit
 from mailpile.plugins.motd import MessageOfTheDay
 from mailpile.ui import ANSIColors, Session, UserInteraction, Completer
 from mailpile.util import *
+from time import sleep
 
 _plugins = PluginManager(builtin=__file__)
 

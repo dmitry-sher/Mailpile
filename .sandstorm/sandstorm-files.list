@@ -118,6 +118,9 @@ opt/Mailpile/mailpile/mail_generator.py
 opt/Mailpile/mailpile/mail_generator.pyc
 opt/Mailpile/mailpile/mail_source/__init__.py
 opt/Mailpile/mailpile/mail_source/__init__.pyc
+opt/Mailpile/mailpile/mail_source/imap.py
+opt/Mailpile/mailpile/mail_source/imap_starttls.py
+opt/Mailpile/mailpile/mail_source/imap_utf7.py
 opt/Mailpile/mailpile/mail_source/local.py
 opt/Mailpile/mailpile/mail_source/local.pyc
 opt/Mailpile/mailpile/mailboxes/__init__.py
@@ -294,6 +297,7 @@ opt/Mailpile/shared-data/default-theme/html/jsapi/settings/content.js
 opt/Mailpile/shared-data/default-theme/html/jsapi/tags/events.js
 opt/Mailpile/shared-data/default-theme/html/jsapi/tags/init.js
 opt/Mailpile/shared-data/default-theme/html/jsapi/tags/modals.js
+opt/Mailpile/shared-data/default-theme/html/jsapi/templates/modal-auto.html
 opt/Mailpile/shared-data/default-theme/html/jsapi/ui/content.js
 opt/Mailpile/shared-data/default-theme/html/jsapi/ui/events.js
 opt/Mailpile/shared-data/default-theme/html/jsapi/ui/global.js
@@ -326,6 +330,9 @@ opt/Mailpile/shared-data/default-theme/html/partials/tools_default.html
 opt/Mailpile/shared-data/default-theme/html/partials/tools_search.html
 opt/Mailpile/shared-data/default-theme/html/partials/tooltips.html
 opt/Mailpile/shared-data/default-theme/html/partials/topbar.html
+opt/Mailpile/shared-data/default-theme/html/profiles/account-form.html
+opt/Mailpile/shared-data/default-theme/html/profiles/add/index.html
+opt/Mailpile/shared-data/default-theme/html/profiles/edit/index.html
 opt/Mailpile/shared-data/default-theme/html/profiles/index.html
 opt/Mailpile/shared-data/default-theme/html/search/default.html
 opt/Mailpile/shared-data/default-theme/html/search/index.html
@@ -577,6 +584,8 @@ usr/lib/python2.7/hmac.py
 usr/lib/python2.7/hmac.pyc
 usr/lib/python2.7/httplib.py
 usr/lib/python2.7/httplib.pyc
+usr/lib/python2.7/imaplib.py
+usr/lib/python2.7/imaplib.pyc
 usr/lib/python2.7/imghdr.py
 usr/lib/python2.7/imghdr.pyc
 usr/lib/python2.7/inspect.py

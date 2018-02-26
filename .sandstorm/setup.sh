@@ -14,10 +14,7 @@ cd /opt/
 # wget https://vocaboo.com/Mailpile.tar.bz2
 # tar -jxf Mailpile.tar.bz2
 
-git clone --recursive https://github.com/mailpile/Mailpile.git
-# cd Mailpile
-# virtualenv -p /usr/bin/python2.7 --system-site-packages mp-virtualenv
-# source mp-virtualenv/bin/activate
+git clone --recursive https://github.com/dmitry-sher/Mailpile.git
 pip install --upgrade setuptools
 pip install -r requirements-with-deps.txt
 apt-get --auto-remove --yes remove python-openssl
@@ -26,5 +23,6 @@ pip install pycrypto
 pip install -U cffi
 pip install jinja2
 pip install fasteners
+cd /opt/Mailpile
 ./mp S sys.http_host=0.0.0.0
 ./mp S sys.http_port=8000
